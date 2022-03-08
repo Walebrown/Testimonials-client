@@ -7,9 +7,7 @@ export default makeStyles({
     alignItems: "center",
   },
 
-  container:{
-    display: 'flex',
-  },
+ 
 
   leftCustomerTitle: {
     flex: 1,
