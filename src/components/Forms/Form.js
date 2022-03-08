@@ -4,9 +4,11 @@ import useStyles from "./styles";
 import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { CreatePost } from "../../redux/postSlice.js";
+import {useNavigate} from 'react-router-dom'
 
 
 const Form = () => {
+  const Navigate = useNavigate()
   const dispatch = useDispatch();
 
   const classes = useStyles();
@@ -14,15 +16,19 @@ const Form = () => {
     firstName: "",
     lastName: "",
     story: "",
+    role: "Customer",
     city: "",
     selectedFile: "",
-    role: "Customer",
+   
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(CreatePost(postData));
     setPostData(postData);
+    Navigate('/successpage')
+    
+
   };
 
   return (
@@ -71,7 +77,7 @@ const Form = () => {
           <TextField className={classes.story}
           name="Share your story"
           variant="outlined"
-          multiline="true"
+          multiline={true}
           rows={5}
           label="Share your story"
           fullWidth

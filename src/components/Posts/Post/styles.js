@@ -6,7 +6,7 @@ export default makeStyles({
     paddingTop: '56.25%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundBlendMode: 'darken',
-    //borderRadius='50%',
+    borderRadius:'50%',
   },
   border: {
     border: 'solid',
