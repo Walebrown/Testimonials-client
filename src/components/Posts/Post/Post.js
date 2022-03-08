@@ -12,10 +12,6 @@ const Post = ({post}) => {
         <Typography variant='h6'>{post.firstName} {post.lastName}</Typography>
         
       </div>
-     
-      <div>
-        <Typography variant='body2' color='textSecondary'>{post.tags.map((tag) => `#${tag}`)}</Typography>
-      </div>
       <CardContent>
       <Typography className= {classes.story} variant='h5' gutterBottom  color='primary'>{post.story}</Typography>
       <Typography className= {classes.city} variant='h5' gutterBottom  color='primary'>{post.city}</Typography>

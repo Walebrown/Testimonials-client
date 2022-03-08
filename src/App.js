@@ -10,6 +10,7 @@ import Featured from "./components/Featured/Featured";
 import ExtraLinks from "./components/header/ExtraLinks/ExtraLinks";
 import Footer from "./components/Footer/footer";
 import Testimonials from './pages/Testimonial'
+import SuccessPage from "./pages/SuccessPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/contact" element={Contact} />
       <Route path="/signUp" element={SignUp} />
       <Route exact path="/testimonials" element={<Testimonials/>} > </Route>
+      <Route exact path="/successpage" element={<SuccessPage/>} > </Route>
     </Routes>
       
       <Footer />
