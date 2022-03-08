@@ -4,11 +4,13 @@ export default makeStyles({
   container: {
     display: "flex",
     flexDirection: "column",
-    margin: 20,
+    margin: '20px',
   },
 
   media: {
-    marginButtom: 5,
+    
+    width: '200px',
+height: '200px',
   },
   fullName: {
     fontFamily: "Inter",
