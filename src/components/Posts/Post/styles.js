@@ -1,53 +1,60 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles({
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    margin: 20,
+  },
+
   media: {
-    height: 0,
-    paddingTop: '56.25%',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backgroundBlendMode: 'darken',
-    borderRadius:'50%',
+    marginButtom: 5,
   },
-  border: {
-    border: 'solid',
+  fullName: {
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "24px",
+    lineHeight: "29px",
+    /* identical to box height */
+
+    letterSpacing: "0.02em",
+
+    color: "#474747",
   },
-  fullHeightCard: {
-    height: '100%',
-  },
-  card: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    borderRadius: '15px',
-    height: '100%',
-    position: 'relative',
-  },
-  overlay: {
-    position: 'absolute',
-    top: '20px',
-    left: '20px',
-    color: 'white',
-  },
-  overlay2: {
-    position: 'absolute',
-    top: '20px',
-    right: '20px',
-    color: 'white',
-  },
-  grid: {
-    display: 'flex',
-  },
+
   details: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    margin: '20px',
+    display: "flex",
+    justifyContent:'spaceBetween',
+    alignContent: 'center',
+    marginButtom: 10
   },
-  title: {
-    padding: '0 16px',
+  role: {
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "13px",
+    lineHeight: "16px",
+    /* identical to box height */
+
+    letterSpacing: "0.02em",
+
+    color: "#0D019A",
   },
-  cardActions: {
-    padding: '0 16px 8px 16px',
-    display: 'flex',
-    justifyContent: 'space-between',
+  city: {},
+
+  story: {
+    width: "300px",
+    height: "264px",
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "16px",
+    /* identical to box height */
+
+    letterSpacing: "0.02em",
+
+    color: "#0D019A",
   },
 });

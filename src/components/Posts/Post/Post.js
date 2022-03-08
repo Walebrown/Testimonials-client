@@ -1,22 +1,27 @@
 import React from 'react'
 import useStyles from './styles';
-import { Card,CardMedia, Typography, CardContent } from '@material-ui/core';
+// import { Card,CardMedia, Typography, CardContent } from '@material-ui/core';
 
 const Post = ({post}) => {
   const classes = useStyles();
   
   return (
-    <Card className={classes.card}>
-      <CardMedia className={classes.media} image={post.selectedFile} title={ post.title}  />
-      <div className={classes.overlay}>
-        <Typography variant='h6'>{post.firstName} {post.lastName}</Typography>
+    <div className={classes.container}>
+      <div className={classes.media}>
+        </div>
+        <img src={post.selectedFile} alt="customer" />
+        <div className={classes.fullName}>{post.firstName} {post.lastName}</div>
+        <div className={classes.details}>
+        <div className={classes.role}> {post.city} </div>
+        <div className={classes.role}> {post.role} </div>
+        </div>
         
-      </div>
-      <CardContent>
-      <Typography className= {classes.story} variant='h5' gutterBottom  color='primary'>{post.story}</Typography>
-      <Typography className= {classes.city} variant='h5' gutterBottom  color='primary'>{post.city}</Typography>
-      </CardContent>
-    </Card>
+        <div className={classes.story}> {post.story} </div>
+        
+
+
+      
+    </div>
   )
 }
 
