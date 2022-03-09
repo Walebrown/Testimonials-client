@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
  export const fetchPost = createAsyncThunk('posts/update', async () => {
-    const {data} = await axios.get('http://localhost:5000/posts');
+    const {data} = await axios.get('https://wtestimonial.herokuapp.com/posts');
     console.log(data)
     return data; 
 
@@ -12,7 +12,7 @@ import axios from 'axios'
 });
 
 export const CreatePost = createAsyncThunk('posts/create', async (newPost) => {
-    const {data} = await axios.post('http://localhost:5000/posts', newPost);
+    const {data} = await axios.post('https://wtestimonial.herokuapp.com/posts', newPost);
     console.log(data)
     return data;
 });
