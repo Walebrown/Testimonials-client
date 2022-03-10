@@ -5,6 +5,8 @@ export default makeStyles(theme =>
   
   banner: {
     display: "flex",
+    justifyContent:'center',
+    alignContent:'center',
     [theme.breakpoints.down('sm')]:{
       flexDirection:'column'
     },
@@ -17,23 +19,49 @@ export default makeStyles(theme =>
     marginTop: 40,
     height: '100%',
     margin: 0,
+    [theme.breakpoints.down('sm')]:{
+      marginTop:0,
+      
+    },
   },
   rightBanner: {
     flex: 1,
     width: '100%',
+    alignItems:"center",
+    margin: 100,
+    [theme.breakpoints.down('sm')]:{
+      margin:0,
+      //width: '70%',
+    },
   },
   imgBackground: {
     position: "relative",
+    width: '100%',
     [theme.breakpoints.down('sm')]:{
-      width: '100px',
+      
     },
   },
   leftBanner: {
     flex: 1,
     position: "relative",
-    //marginLeft: 100,
-    top: -50,
+    //width: '70%',
+    margin: 100,
+    top: -150,
+    [theme.breakpoints.down('sm')]:{
+      margin: 0,
+      top:0,
+      
+      
+    },
   },
+  images:{
+    [theme.breakpoints.down('sm')]:{
+      width: '100%',
+      height: '100%',
+  
+    },
+  },
+ 
 
   footerLinks: {
     display: "flex",
@@ -60,19 +88,15 @@ export default makeStyles(theme =>
     fontSize: "14px",
     lineHeight: "20px",
     textAlign:'center',
-    /* or 100% */
-
     letterSpacing: "0.02em",
-
     color: "#FFFFFF",
 
   },
   subscribe:{
     display: 'flex',
-    
     padding: '5px',
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    width: '50%',
+    width: '100%',
     [theme.breakpoints.down('sm')]:{
       width:'100%',
     },
@@ -81,7 +105,8 @@ export default makeStyles(theme =>
     flex: 1,
     background:'none',
     border: 'none',
-    marginLeft:0,
+    width: '100%',
+
     
     
   

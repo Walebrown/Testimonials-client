@@ -3,33 +3,41 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
-      margin: theme.spacing(3),
+      margin: theme.spacing(2,2),
+      verticalAlign:'middle',
     },
   },
   paper: {
-    display: "flex",
-    padding: theme.spacing(3),
-    width: "527px",
-    height: "700px",
-    flexDirection: "column",
-    justifyContent: "center",
+    padding: theme.spacing(1),
+    width: "50%",
+    height: "100%",
+    margin:'30px',
+    marginLeft: "350px",
+    [theme.breakpoints.down('sm')]:{
+      width: '100%',
+      margin: '0',
+      marginLeft: "0",
+      
+    },
 
-    marginLeft: "500px",
+   
   },
   form: {
-    display: "flex",
-    flexWrap: "wrap",
+    display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: "center",
     alignContent: "center",
   },
   fileInput: {
-    width: "463px",
-    height: "62px",
+    width: '95%',
+    margin: '10px 0',
+    // width: "463px",
+    // height: "62px",
     background: "#FEFEFE",
     border: "1px solid #EAEAEA",
     boxSizing: "border-box",
     borderRadius: "8px",
-    padding: 20,
+    padding: '20px',
     marginTop: 10,
   },
   buttonSubmit: {
@@ -43,8 +51,8 @@ export default makeStyles((theme) => ({
     borderRadius: "8px",
   },
   story: {
-    width: "463px",
-    height: "111px",
+    width: "95%",
+   
   },
   title: {
     fontFamily: "Inter",

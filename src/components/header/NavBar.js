@@ -48,7 +48,7 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static" style= {{background:'white', paddingLeft:'100px', paddingRight:'100px' }}>
+    <AppBar position="static" style= {{background:'white', paddingLeft:'0', paddingRight:'0' }}>
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4"  className={classes.logo}>

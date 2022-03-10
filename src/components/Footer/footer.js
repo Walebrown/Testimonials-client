@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={classes.banner}>
         <div className={classes.leftBanner}>
           <div className={classes.imgBackground}>
-            <img src={subscribeBanner} alt="subscribe" />
+            <img src={subscribeBanner} alt="subscribe"  className={classes.images}/>
           </div>
         </div>
         <div className={classes.rightBanner}>

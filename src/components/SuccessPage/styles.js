@@ -1,22 +1,27 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles({
+export default makeStyles(theme =>
+  ({
   container: {
     display: "flex",
     flexDirection: "column",
     alignContent: "center",
     justifyContent: "center",
     alignItems: "center",
-    width: "527px",
-    height: "627px",
-    marginLeft:"500px",
+    width: "100%",
+    height: "50%",
+    //marginLeft:"500px",
     marginTop: '20px',
-
     background: "#FFFFFF",
     borderRadius: "16px",
+    [theme.breakpoints.down('sm')]:{
+      width:'100%',
+      //width: '70%',
+    },
   },
 
   title: {
+    flex:1,
     fontFamily: "Inter",
     fontStyle: "normal",
     fontWeight: "bold",
@@ -48,4 +53,4 @@ export default makeStyles({
     color: "#4A4A4A",
     margin: 20,
   },
-});
+}));

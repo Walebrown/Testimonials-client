@@ -4,11 +4,10 @@ import useStyles from "./styles";
 import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 import { CreatePost } from "../../redux/postSlice.js";
-import {useNavigate} from 'react-router-dom'
-
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-  const Navigate = useNavigate()
+  const Navigate = useNavigate();
   const dispatch = useDispatch();
 
   const classes = useStyles();
@@ -19,30 +18,24 @@ const Form = () => {
     role: "Customer",
     city: "",
     selectedFile: "",
-   
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(CreatePost(postData));
     setPostData(postData);
-    Navigate('/successpage')
-    
-
+    Navigate("/successpage");
   };
 
   return (
-    <Paper className={classes.paper}>
-      
+    <Paper className={classes.paper} >
       <form
         autoComplete="off"
         noValidate
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
-      >  
-      <div className={classes.title}>
-      Share your amazing story!
-      </div>      
+      >
+        <h2 className={classes.title}>Share your amazing story!</h2>
         <div className={classes.fileInput}>
           <FileBase
             type="file"
@@ -53,7 +46,7 @@ const Form = () => {
             className={classes.fileInput}
           />
         </div>
-      
+
         <TextField
           name="firstName"
           variant="outlined"
@@ -74,7 +67,8 @@ const Form = () => {
             setPostData({ ...postData, lastName: e.target.value })
           }
         />
-          <TextField className={classes.story}
+        <TextField
+          className={classes.story}
           name="Share your story"
           variant="outlined"
           multiline={true}
@@ -82,9 +76,7 @@ const Form = () => {
           label="Share your story"
           fullWidth
           value={postData.story}
-          onChange={(e) =>
-            setPostData({ ...postData, story: e.target.value })
-          }
+          onChange={(e) => setPostData({ ...postData, story: e.target.value })}
         />
         <TextField
           name="city"

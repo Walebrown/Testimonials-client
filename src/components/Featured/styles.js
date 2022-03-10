@@ -5,10 +5,10 @@ export default makeStyles(theme =>
 
   container:{
     width: '100vw',
-    padding: '20px',
     margin: 0,
     [theme.breakpoints.down('sm')]:{
       padding: 0,
+     // width: '70%',
     },
   },
   whiteCustomerExperience: {
@@ -67,6 +67,7 @@ export default makeStyles(theme =>
     position: 'relative',
     [theme.breakpoints.down('sm')]:{
       margin:0,
+      
     },
   },
   imgBackground: {
@@ -76,33 +77,42 @@ export default makeStyles(theme =>
     [theme.breakpoints.down('sm')]:{
       // width: '100%',
       // height: '100%',
+      width: '100%',
     },
   },
 
   blackCustomerExperience: {
     display: "flex",
-    // position: 'absolute' ,
    justifyContent: 'center',
      alignContent: 'center',
     backgroundColor: "black",
-    //width: '100vw',
-    //height: '100vh',
+    padding: 100,
+    margin: 0,
     [theme.breakpoints.down('sm')]:{
       flexDirection:'column',
-      padding: 10,
+      padding: 0,
       
     },
   },
 
   blackGirlsExperience: {
     flex:1,
-     //margin: 100,
+    marginLeft: 100,
+  
+    [theme.breakpoints.down('sm')]:{
+      flexDirection:'column',
+      margin:0,
+      
+
+    }
+     
      
   
   },
   blackGirlsExperienceTitle: {
     fontFamily: "Inter",
     fontStyle: "normal",
+    width: '100%',
     fontWeight: "bold",
     fontSize: 32,
     letterSpacing: 0.01,
@@ -113,6 +123,7 @@ export default makeStyles(theme =>
   },
   blackGirlsExperienceMessage: {
     fontFamily: "Inter",
+    width: '100%',
     fontStyle: "normal",
     fontWeight: "bold",
     fontSize: 14,
@@ -120,13 +131,11 @@ export default makeStyles(theme =>
     lineHeight: 2.3,
     color: "white",
     [theme.breakpoints.down('sm')]:{
-      textAlign:'center',
+      textAlign:'center'
     },
   },
-  tags: {},
   blackGirlsImage:{
     flex:1,
-     margin: 100,
      position: 'relative',
      [theme.breakpoints.down('sm')]:{
       margin:0,
@@ -154,7 +163,6 @@ export default makeStyles(theme =>
   //vendor expereince
   vendorExperience: {
     display: "flex",
-    // position: 'absolute' ,
    justifyContent: 'center',
      alignContent: 'center',
     backgroundColor: "#FFF8F5",
@@ -165,7 +173,6 @@ export default makeStyles(theme =>
   },
     
   vendorExperienceTitle: {
-    textAlign:'center',
     fontFamily: "Inter",
     fontStyle: "normal",
     fontWeight: "bold",
@@ -173,11 +180,11 @@ export default makeStyles(theme =>
     letterSpacing: 0.01,
     color: "black",
     [theme.breakpoints.down('sm')]:{
+      textAlign:'center',
       
     },
   },
   vendorExperienceMessage: {
-    textAlign:'center',
     fontFamily: "Inter",
     fontStyle: "normal",
     fontWeight: "bold",
@@ -189,6 +196,7 @@ export default makeStyles(theme =>
     color: "black",
     [theme.breakpoints.down('sm')]:{
       fontSize:12,
+      textAlign:'center',
     },
   },
   vendorImage:{
@@ -199,5 +207,21 @@ export default makeStyles(theme =>
     },
   },
 
+  customerTag:{
+    color: 'white',
+    [theme.breakpoints.down('sm')]:{
+      textAlign:'center',
+
+    },
+
+  },
+  vendorTag:{
+    color:'black',
+    [theme.breakpoints.down('sm')]:{
+      textAlign:'center',
+
+    },
+
+  }
  
 }));
