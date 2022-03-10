@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles({
+export default makeStyles(theme =>
+  ({
   links: {
     display: "flex",
     flexDirection: "row",
@@ -19,7 +20,10 @@ export default makeStyles({
     border: "1px solid rgba(0, 0, 0, 0.08)",
     boxSizing: "border-box",
     boxShadow: "1px 4px 4px rgba(0, 0, 0, 0.04)",
+    [theme.breakpoints.down('sm')]:{
+      display: 'none',
+    },
   },
 
   
-});
+}));
